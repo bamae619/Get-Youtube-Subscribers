@@ -5,6 +5,9 @@ const mongoose = require('mongoose') // Import the mongoose module
 const port = 3000  // Port to run the server on
 const swaggerUi = require("swagger-ui-express"); // Import swagger-ui-express
 const swaggerJSDoc = require("swagger-jsdoc"); // Import swagger-jsdoc
+const cors = require('cors') //import cors
+// Using the CORS middleware to allow cross-origin requests
+app.use(cors()); 
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
